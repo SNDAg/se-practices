@@ -32,7 +32,7 @@ This project was built as part of the hands-on curriculum, covering the followin
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started!
 
 ### Prerequisites
 * [Node.js](https://nodejs.org/) (v20 or higher)
