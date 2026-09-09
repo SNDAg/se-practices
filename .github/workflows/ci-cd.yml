@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI Pipeline
 
 on:
   push:
@@ -6,16 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
-# הרשאות נדרשות עבור ה-CD (העלאת האתר ל-GitHub Pages)
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
-  # ------------------------------------
-  # חלק 1: CI (Continuous Integration) - ירוץ גם ב-PR וגם ב-Push
-  # ------------------------------------
   build-and-test:
     runs-on: ubuntu-latest
     steps:
@@ -32,27 +23,3 @@ jobs:
 
       - name: Run tests
         run: npm test
-
-  # ------------------------------------
-  # חלק 2: CD (Continuous Deployment) - ירוץ רק לאחר מיזוג ל-main
-  # ------------------------------------
-  deploy:
-    needs: build-and-test # הרצה רק אם שלב ה-CI עבר בהצלחה!
-    # מונע פריסה של האתר במהלך PR, ופורס רק ב-Push לענף main
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.' # הנתיב של הקבצים שיועלו (index.html, js, css)
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
