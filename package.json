@@ -1,0 +1,20 @@
+{
+  "name": "se-practices",
+  "version": "1.0.0",
+  "description": "A comprehensive JavaScript practice repository demonstrating modern software development principles, DevOps methodologies, and automated workflows.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SNDAg/se-practices.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SNDAg/se-practices/issues"
+  },
+  "homepage": "https://github.com/SNDAg/se-practices#readme"
+}
