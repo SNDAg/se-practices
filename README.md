@@ -28,7 +28,7 @@ This project was built as part of the hands-on curriculum, covering the followin
 * **Package Manager:** npm
 * **Version Control:** Git & GitHub
 * **CI/CD:** GitHub Actions
-* **Containerization:** Docker
+* **Containerization:** Docker, Kubernetes
 
 ---
 
