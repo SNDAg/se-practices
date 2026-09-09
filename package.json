@@ -4,7 +4,7 @@
   "description": "A comprehensive JavaScript practice repository demonstrating modern software development principles, DevOps methodologies, and automated workflows.",
   "main": "index.js",
   "scripts": {
-    "test": "all test has passed successfully && exit 0"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
