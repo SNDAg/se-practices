@@ -1,18 +1,18 @@
 const assert = require('node:assert');
 const test = require('node:test');
-const { Calculator } = require('./calculator'); 
+const { MyCalculator } = require('./calculator'); 
 
 class TestCalculator {
     constructor() {
-        this.calc = new Calculator();
+        this.calc = new MyCalculator();
     }
 
     run() {
         test('Calculator Class Tests', async (t) => {
             
             await t.test('add() - should correctly add two numbers', () => {
-                assert.strictEqual(this.calc.add(2, 3), 5);
-                assert.strictEqual(this.calc.add(-1, 1), 0);
+                assert.strictEqual(this.calc.add_bla(2000, 3000), 5000,"Expected 2 + 3 to equal 5");
+                assert.strictEqual(this.calc.add_bla(-1, 1), 0,"Expected -1 + 1 to equal 0");
             });
 
             await t.test('sub() - should correctly subtract two numbers', () => {

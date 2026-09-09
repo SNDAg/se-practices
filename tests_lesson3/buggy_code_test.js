@@ -4,19 +4,14 @@ const { buggyFunction, safeDivide } = require('./buggy_code');
 
 test('Testing Exceptions', async (t) => {
 
-    // 1. Testing function without parameters (Exactly like the slide)
-    // Note: Pass the function reference 'buggyFunction', do NOT call it with ()
+//general exaple of assert throwing exception
     await t.test('catching an error from buggyFunction', () => {
         assert.throws(buggyFunction, Error);
     });
 
-    // 2. Testing function WITH parameters (Bonus useful flow)
-    // Note: Wrap it inside an anonymous arrow function () => ...
+//test to make sure that the real code thrws exception when dividing by zero
     await t.test('catching divide by zero error', () => {
-        assert.throws(
-            () => safeDivide(10, 0), 
-            Error
-        );
+        assert.throws(() => safeDivide(10, 0), Error, "Cannot divide by zero");
     });
 
 });
