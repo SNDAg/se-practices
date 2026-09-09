@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/SNDAg/se-practices/issues"
   },
-  "homepage": "https://github.com/SNDAg/se-practices#readme"
+  "homepage": "https://github.com/SNDAg/se-practices#readme",
+  "devDependencies": {
+    "jest": "^30.5.1"
+  }
 }
