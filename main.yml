@@ -2,7 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "main","feature-branch" ]
+    branches: [ "main", "feature-branch" ]
+  pull_request:
+    branches: [ "main" ]
 
 # הרשאות נדרשות עבור ה-CD (העלאת האתר ל-GitHub Pages)
 permissions:
@@ -12,14 +14,13 @@ permissions:
 
 jobs:
   # ------------------------------------
-  # חלק 1: CI (Continuous Integration)
+  # חלק 1: CI (Continuous Integration) - ירוץ גם ב-PR וגם ב-Push
   # ------------------------------------
   build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4 
-        # marketplace
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -33,10 +34,12 @@ jobs:
         run: npm test
 
   # ------------------------------------
-  # חלק 2: CD (Continuous Deployment)
+  # חלק 2: CD (Continuous Deployment) - ירוץ רק לאחר מיזוג ל-main
   # ------------------------------------
   deploy:
     needs: build-and-test # הרצה רק אם שלב ה-CI עבר בהצלחה!
+    # מונע פריסה של האתר במהלך PR, ופורס רק ב-Push לענף main
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
