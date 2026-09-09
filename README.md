@@ -8,7 +8,7 @@ A comprehensive JavaScript practice repository demonstrating modern software dev
 
 This project was built as part of the hands-on curriculum, covering the following core modules:
 
-1. **Linux and Shell** – Working with Unix environments, writing Shell commands, and scripting.
+1. **Linux and Shell** – Working with Linux environment, writing Shell commands, and scripting.
 2. **Source Control and Git** – Version control best practices, branching strategies, and Pull Requests.
 3. **Testing** – Writing unit tests in JavaScript to ensure code reliability.
 4. **Open Source** – Understanding open-source principles and leveraging external packages.
