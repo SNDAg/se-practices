@@ -3,9 +3,7 @@
 A comprehensive JavaScript practice repository demonstrating modern software development principles, DevOps methodologies, and automated workflows.
 
 ---
-
-## 📚 Topics Covered
-
+## 📚 Topics Coverd
 This project was built as part of the hands-on curriculum, covering the following core modules:
 
 1. **Linux and Shell** – Working with Linux environment, writing Shell commands, and scripting.
@@ -21,9 +19,7 @@ This project was built as part of the hands-on curriculum, covering the followin
 11. **DevOps & CI/CD** – Automating build, test, and deployment processes via GitHub Actions.
 
 ---
-
 ## 🛠️ Tech Stack & Tools
-
 * **Language:** JavaScript (Node.js)
 * **Package Manager:** npm
 * **Version Control:** Git & GitHub
